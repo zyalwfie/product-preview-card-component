@@ -1,0 +1,262 @@
+/* montserrat-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../assets/fonts/montserrat-v31-latin-500.woff2") format("woff2");
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../assets/fonts/montserrat-v31-latin-700.woff2") format("woff2");
+}
+/* fraunces-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../assets/fonts/fraunces-v38-latin-700.woff2") format("woff2");
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+}
+@media (min-width: 1440px) {
+  body {
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.card {
+  position: relative;
+  font-family: "Montserrat";
+  margin-block: 5rem;
+  margin-inline: auto;
+  max-width: 350px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: hsl(0, 0%, 100%);
+}
+.card .card__header {
+  flex: 1;
+}
+.card .card__image {
+  width: 100%;
+  height: 342px;
+  object-fit: cover;
+  object-position: center -1.25rem;
+}
+.card .card__body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.card .card__body .card__badge {
+  font-size: 0.75rem;
+  letter-spacing: 0.25rem;
+  color: hsl(228, 12%, 48%);
+  text-transform: uppercase;
+}
+.card .card__body .card__title {
+  font-size: 2rem;
+  font-family: "Fraunces";
+  color: hsl(212, 21%, 14%);
+}
+.card .card__body .card__description {
+  font-size: 14px;
+  color: hsl(228, 12%, 48%);
+  line-height: 1.25rem;
+}
+.card .card__body .card__price {
+  width: 33.3333333333%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.card .card__body .card__discount-price {
+  font-size: 2rem;
+  color: hsl(158, 36%, 37%);
+  font-weight: 700;
+  font-family: "Fraunces";
+}
+.card .card__body .card__real-price {
+  font-size: 0.75rem;
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+}
+.card .card__body .card__button {
+  padding-block: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  border: none;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(158, 36%, 37%);
+  font-family: inherit;
+  font-weight: 700;
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+.card .card__body .card__button:hover {
+  background-color: hsl(158, 42%, 18%);
+}
+.card .card__attribution {
+  position: absolute;
+  min-width: max-content;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-inline: 0.75rem;
+  padding-block-end: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  background-color: hsl(30, 38%, 92%);
+  font-size: 0.75rem;
+}
+.card .card__attribution a {
+  color: hsl(158, 36%, 37%);
+  transition: 0.1s ease;
+  text-decoration: none;
+}
+.card .card__attribution a:hover {
+  color: hsl(158, 42%, 18%);
+}
+@media (min-width: 1440px) {
+  .card {
+    margin-block: 0;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+  }
+  .card .card__header,
+  .card .card__body {
+    flex-basis: 50%;
+  }
+  .card .card__image {
+    height: 100%;
+    object-position: center center;
+  }
+  .card .card__attribution {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

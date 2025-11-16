@@ -1,0 +1,156 @@
+@use 'sass:math';
+@use 'font';
+@use 'reset';
+@use 'mixin';
+
+$green-500: hsl(158, 36%, 37%);
+$green-700: hsl(158, 42%, 18%);
+$black: hsl(212, 21%, 14%);
+$grey: hsl(228, 12%, 48%);
+$cream: hsl(30, 38%, 92%);
+$white: hsl(0, 0%, 100%);
+$font-size-paragraph: 14px;
+
+body {
+	background-color: $cream;
+
+	@include mixin.breakpoint('xl') {
+		min-height: 100dvh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.card {
+	position: relative;
+	font-family: 'Montserrat';
+	margin-block: 5rem;
+	margin-inline: auto;
+	max-width: 350px;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	background-color: $white;
+
+	.card__header {
+		flex: 1;
+	}
+
+	.card__image {
+		width: 100%;
+		height: 342px;
+		object-fit: cover;
+		object-position: center -1.25rem;
+	}
+
+	.card__body {
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+
+		.card__badge {
+			font-size: 0.75rem;
+			letter-spacing: 0.25rem;
+			color: $grey;
+			text-transform: uppercase;
+		}
+
+		.card__title {
+			font-size: 2rem;
+			font-family: 'Fraunces';
+			color: $black;
+		}
+
+		.card__description {
+			font-size: $font-size-paragraph;
+			color: $grey;
+			line-height: 1.25rem;
+		}
+
+		.card__price {
+			width: math.div(300px, 900px) * 100%;
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+		}
+
+		.card__discount-price {
+			font-size: 2rem;
+			color: $green-500;
+			font-weight: 700;
+			font-family: 'Fraunces';
+		}
+
+		.card__real-price {
+			font-size: 0.75rem;
+			color: $grey;
+			text-decoration: line-through;
+		}
+
+		.card__button {
+			padding-block: 1rem;
+			border-radius: 0.5rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 0.75rem;
+			border: none;
+			color: $white;
+			background-color: $green-500;
+			font-family: inherit;
+			font-weight: 700;
+			transition: 0.1s ease;
+			cursor: pointer;
+		}
+
+		.card__button:hover {
+			background-color: $green-700;
+		}
+	}
+
+	.card__attribution {
+		position: absolute;
+		min-width: max-content;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		padding-inline: 0.75rem;
+		padding-block-end: 0.5rem;
+		border-bottom-right-radius: 0.5rem;
+		border-bottom-left-radius: 0.5rem;
+		background-color: $cream;
+		font-size: 0.75rem;
+
+		a {
+			color: $green-500;
+			transition: 0.1s ease;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: $green-700;
+		}
+	}
+
+	@include mixin.breakpoint('xl') {
+		margin-block: 0;
+		max-width: 600px;
+		display: flex;
+		align-items: center;
+
+		.card__header,
+		.card__body {
+			flex-basis: 50%;
+		}
+
+		.card__image {
+			height: 100%;
+			object-position: center center;
+		}
+
+		.card__attribution {
+			display: none;
+		}
+	}
+}
