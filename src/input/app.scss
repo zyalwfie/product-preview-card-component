@@ -23,7 +23,6 @@ body {
 }
 
 .card {
-	position: relative;
 	font-family: 'Montserrat';
 	margin-block: 5rem;
 	margin-inline: auto;
@@ -34,6 +33,7 @@ body {
 
 	.card__header {
 		flex: 1;
+		position: relative;
 	}
 
 	.card__image {
@@ -131,13 +131,16 @@ body {
 		a:hover {
 			color: $green-700;
 		}
+
+		@include mixin.breakpoint('xl') {
+			font-size: .5rem;
+		}
 	}
 
 	@include mixin.breakpoint('xl') {
 		margin-block: 0;
 		max-width: 600px;
 		display: flex;
-		align-items: center;
 
 		.card__header,
 		.card__body {
@@ -146,11 +149,7 @@ body {
 
 		.card__image {
 			height: 100%;
-			object-position: center center;
-		}
-
-		.card__attribution {
-			display: none;
+			object-position: center;
 		}
 	}
 }

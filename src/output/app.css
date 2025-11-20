@@ -143,7 +143,6 @@ body {
   }
 }
 .card {
-  position: relative;
   font-family: "Montserrat";
   margin-block: 5rem;
   margin-inline: auto;
@@ -154,6 +153,7 @@ body {
 }
 .card .card__header {
   flex: 1;
+  position: relative;
 }
 .card .card__image {
   width: 100%;
@@ -240,11 +240,15 @@ body {
   color: hsl(158, 42%, 18%);
 }
 @media (min-width: 1440px) {
+  .card .card__attribution {
+    font-size: 0.5rem;
+  }
+}
+@media (min-width: 1440px) {
   .card {
     margin-block: 0;
     max-width: 600px;
     display: flex;
-    align-items: center;
   }
   .card .card__header,
   .card .card__body {
@@ -252,10 +256,7 @@ body {
   }
   .card .card__image {
     height: 100%;
-    object-position: center center;
-  }
-  .card .card__attribution {
-    display: none;
+    object-position: center;
   }
 }
 

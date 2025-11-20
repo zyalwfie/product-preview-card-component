@@ -40,21 +40,31 @@
 		<main class="main">
 			<article class="card">
 				<header class="card__header">
-					<img
-						class="card__image"
-						src="assets/images/image-product-mobile.jpg"
-						alt="A square glass bottle of Chanel Gabrielle perfume with a gold cap placed on a light surface, surrounded by green leaves for an elegant and natural look"
-						width="700"
-						height="684"
-						loading="eager"
-						fetchpriority="high"
-						decoding="async"
-						srcset="
-							assets/images/image-product-mobile.jpg  375w,
-							assets/images/image-product-desktop.jpg 600w
-						"
-						sizes="(min-width: 375px) 600w"
-					/>
+					<picture>
+						<source
+							media="(min-width: 1440px)"
+							srcset="./assets/images/image-product-desktop.jpg"
+						/>
+
+						<img
+							class="card__image"
+							src="./assets/images/image-product-desktop.jpg"
+							alt="A square glass bottle of Chanel Gabrielle perfume with a gold cap placed on a light surface, surrounded by green leaves for an elegant and natural look"
+							width="700"
+							height="684"
+						/>
+					</picture>
+					<div class="card__attribution">
+						Challenge by
+						<a
+							href="https://www.frontendmentor.io?ref=challenge"
+							target="_blank"
+							>Frontend Mentor</a
+						>. Coded by
+						<a href="https://github.com/zyalwfie" target="_blank"
+							>wafy</a
+						>.
+					</div>
 				</header>
 				<main class="card__body">
 					<div class="card__badge">Perfume</div>
@@ -73,17 +83,6 @@
 						Add to Cart
 					</button>
 				</main>
-				<div class="card__attribution">
-					Challenge by
-					<a
-						href="https://www.frontendmentor.io?ref=challenge"
-						target="_blank"
-						>Frontend Mentor</a
-					>. Coded by
-					<a href="https://github.com/zyalwfie" target="_blank"
-						>wafy</a
-					>.
-				</div>
 			</article>
 		</main>
 	</body>
