@@ -4,18 +4,16 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 ## Table of contents
 
-- [Frontend Mentor - Product preview card component solution](#frontend-mentor---product-preview-card-component-solution)
-	- [Table of contents](#table-of-contents)
-	- [Overview](#overview)
-		- [The challenge](#the-challenge)
-		- [Screenshot](#screenshot)
-		- [Links](#links)
-	- [My process](#my-process)
-		- [Built with](#built-with)
-		- [What I learned](#what-i-learned)
-		- [Continued development](#continued-development)
-	- [Author](#author)
-	- [Acknowledgments](#acknowledgments)
+-   [Overview](#overview)
+    -   [The challenge](#the-challenge)
+    -   [Screenshot](#screenshot)
+    -   [Links](#links)
+-   [My process](#my-process)
+    -   [Built with](#built-with)
+    -   [What I learned](#what-i-learned)
+    -   [Continued development](#continued-development)
+-   [Author](#author)
+-   [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -102,17 +100,17 @@ $breakpoints: (
 
 For future projects, I want to focus on:
 
-- Implementing CSS Grid for more complex layouts.
-- Diving deeper into accessibility (A11y) concepts to ensure all projects are accessible to all users.
-- Exploring CSS Custom Properties (CSS Variables) as an alternative or complement to SASS variables, especially for dynamic theming.
+-   Implementing CSS Grid for more complex layouts.
+-   Diving deeper into accessibility (A11y) concepts to ensure all projects are accessible to all users.
+-   Exploring CSS Custom Properties (CSS Variables) as an alternative or complement to SASS variables, especially for dynamic theming.
 
 ## Author
 
 -   Website - [zyalwfie.com](https://www.zyalwfie.com)
 -   Frontend Mentor - [@zyalwfie](https://www.frontendmentor.io/profile/zyalwfie)
--   Instagram - [@wwfyy_](https://www.instagram.com/wwfyy_)
+-   Instagram - [@wwfyy\_](https://www.instagram.com/wwfyy_)
 
 ## Acknowledgments
 
-- Thanks to Frontend Mentor for providing this challenge.
-- Thanks to anyone in the Frontend Mentor community who provided helpful feedback.
+-   Thanks to Frontend Mentor for providing this challenge.
+-   Thanks to anyone in the Frontend Mentor community who provided helpful feedback.
