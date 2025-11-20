@@ -121,6 +121,7 @@ body {
 		border-bottom-left-radius: 0.5rem;
 		background-color: $cream;
 		font-size: 0.75rem;
+		transition: 0.2s linear;
 
 		a {
 			color: $green-500;
@@ -133,7 +134,27 @@ body {
 		}
 
 		@include mixin.breakpoint('xl') {
-			font-size: .5rem;
+			font-size: 0.5rem;
+			top: initial;
+			left: initial;
+			transform: initial;
+			inset: 0 0;
+			background-color: rgba($color: #000000, $alpha: 0.3);
+			backdrop-filter: blur(2px);
+			color: $white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			pointer-events: none;
+			opacity: 0;
+
+			a {
+				color: $cream;
+			}
+
+			a:hover {
+				color: $grey;
+			}
 		}
 	}
 
@@ -151,5 +172,11 @@ body {
 			height: 100%;
 			object-position: center;
 		}
+
+		.card__header:hover .card__attribution {
+			opacity: 1;
+			pointer-events: auto;
+		}
 	}
 }
+

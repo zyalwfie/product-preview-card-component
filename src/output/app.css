@@ -230,6 +230,7 @@ body {
   border-bottom-left-radius: 0.5rem;
   background-color: hsl(30, 38%, 92%);
   font-size: 0.75rem;
+  transition: 0.2s linear;
 }
 .card .card__attribution a {
   color: hsl(158, 36%, 37%);
@@ -242,6 +243,24 @@ body {
 @media (min-width: 1440px) {
   .card .card__attribution {
     font-size: 0.5rem;
+    top: initial;
+    left: initial;
+    transform: initial;
+    inset: 0 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0;
+  }
+  .card .card__attribution a {
+    color: hsl(30, 38%, 92%);
+  }
+  .card .card__attribution a:hover {
+    color: hsl(228, 12%, 48%);
   }
 }
 @media (min-width: 1440px) {
@@ -257,6 +276,10 @@ body {
   .card .card__image {
     height: 100%;
     object-position: center;
+  }
+  .card .card__header:hover .card__attribution {
+    opacity: 1;
+    pointer-events: auto;
   }
 }
 
